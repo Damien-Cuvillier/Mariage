@@ -12,6 +12,9 @@ const Hebergement = () => {
         slidesToScroll: 1,
         prevArrow: <PrevArrow />, // Ajoutez la flèche gauche
         nextArrow: <NextArrow />, // Ajoutez la flèche droite
+        autoplay: true, // Activez le défilement automatique
+        autoplaySpeed: 3000, // Durée entre chaque défilement (en millisecondes)
+        pauseOnHover: true, // Mettre en pause le défilement lors du survol
     };
 
     const images = [
