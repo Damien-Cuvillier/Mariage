@@ -11,10 +11,11 @@ const Description = () => {
                 Voici le programme de la journée, où vous trouverez tous les détails 
                 concernant les événements prévus. 
             </p>
-            <p className="text-gray-700">
+            <p className="text-gray-700 pb-4">
                 N'hésitez pas à nous contacter si vous avez des questions. 
                 Nous avons hâte de partager ce moment spécial avec vous !
             </p>
+            <span className='font-bold text-xl font-serif'>Merci de répondre sur l'onglet RSVP</span>
         </div>
     );
 };
