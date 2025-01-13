@@ -9,25 +9,25 @@ function Banner() {
                     <img 
                         src="/images/photo1.jpg" 
                         alt="cérémonie laique" 
-                        className="w-[300px] h-[200px] object-cover rounded-lg"
+                        className="w-[500px] h-[400px] object-cover rounded-lg"
                     />
-                    <span className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-6xl font-bold">13</span>
+                    <span className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-6xl font-bold pt-12">13</span>
                 </div>
                 <div className="relative">
                     <img 
                         src="/images/photo2.jpg" 
                         alt="alliances" 
-                        className="w-[300px] h-[200px] object-cover rounded-lg"
+                        className="w-[500px] h-[400px] object-cover rounded-lg"
                     />
-                    <span className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-6xl font-bold">09</span>
+                    <span className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-6xl font-bold pt-12">09</span>
                 </div>
                 <div className="relative">
                     <img 
                         src="/images/photo3.jpg" 
                         alt="remerciements" 
-                        className="w-[300px] h-[200px] object-cover rounded-lg"
+                        className="w-[500px] h-[400px] object-cover rounded-lg"
                     />
-                    <span className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-6xl font-bold">25</span>
+                    <span className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-6xl font-bold pt-12">25</span>
                 </div>
             </div>
         </div>

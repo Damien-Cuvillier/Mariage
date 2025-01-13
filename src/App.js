@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Composant/header';
 import Banner from './Composant/banner';
 import Programme from './Composant/Programme';
+import Description from './Composant/Description';
 // Importez vos autres composants de page ici
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
                         <Route path="/" element={
                             <>
                                 <Banner />
+                                <Description />
                                 <Programme />
                                 {/* Autres composants de la page d'accueil */}
                             </>
