@@ -1,6 +1,6 @@
 // mariage/src/Composant/Description.js
 import React from 'react';
-
+import { Link } from 'react-router-dom'; // Importez Link
 const Description = () => {
     return (
         <div className="container mx-auto px-6 py-8 text-center">
@@ -16,6 +16,13 @@ const Description = () => {
                 Nous avons hâte de partager ce moment spécial avec vous !
             </p>
             <span className='font-bold text-xl font-serif'>Merci de répondre sur l'onglet RSVP</span>
+            <div className="text-center mt-8">
+                <Link to="/rsvp">
+                    <button className="bg-gray-200 text-black py-2 px-4 shadow-xl rounded-lg hover:bg-gray-400 border-transition duration-200">
+                        Confirmez votre venue
+                    </button>
+                </Link>
+            </div>
         </div>
     );
 };

@@ -11,6 +11,7 @@ const RSVP = ({ showOnlyForm = false }) => {
         email: Yup.string().email('Adresse mail invalide').required('Veuillez remplir le champ'),
         message: Yup.string().required('Veuillez remplir le champ'),
         address: Yup.string().required('Veuillez remplir le champ'), // Validation pour l'adresse
+        alim: Yup.string().required('Veuillez remplir le champ'), // Validation pour les restrictions alimentaires
     });
 
     const handleSubmit = async (values, { setSubmitting, resetForm }) => {
@@ -29,6 +30,7 @@ const RSVP = ({ showOnlyForm = false }) => {
                     email: values.email,
                     message: values.message,
                     address: values.address, // Inclure l'adresse dans l'envoi
+                    alim: values.alim, // Inclure les restrictions alimentaires
                     subject: 'Les invités ont répondu'
                 }),
             });
@@ -55,7 +57,7 @@ const RSVP = ({ showOnlyForm = false }) => {
             <Banner />
             <div className={`contact-form-section ${showOnlyForm ? '' : 'min-h-screen'} mt-12`}>
                 <Formik
-                    initialValues={{ name: '', email: '', message: '', address: '' }} // Assurez-vous que 'address' est initialisé
+                    initialValues={{ name: '', email: '', message: '', address: '', alim: '' }} // Assurez-vous que 'alim' est initialisé
                     validationSchema={validationSchema}
                     onSubmit={handleSubmit}
                 >
@@ -89,6 +91,7 @@ const RSVP = ({ showOnlyForm = false }) => {
                                         />
                                         <ErrorMessage name="email" component="div" className="text-red-500 text-sm mt-1 text-center" />
                                     </div>
+
                                     <div className="space-y-2">
                                         <Field
                                             type="text"
@@ -98,6 +101,17 @@ const RSVP = ({ showOnlyForm = false }) => {
                                         />
                                         <ErrorMessage name="address" component="div" className="text-red-500 text-sm mt-1 text-center" />
                                     </div>
+
+                                    <div className="space-y-2">
+                                        <Field
+                                            type="text"
+                                            name="alim"
+                                            className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 focus:border-blue-400 focus:ring-blue-400 focus:outline-none transition duration-150 ease-in-out"
+                                            placeholder="Restrictions alimentaires"
+                                        />
+                                        <ErrorMessage name="alim" component="div" className="text-red-500 text-sm mt-1 text-center" /> {/* Correction ici */}
+                                    </div>
+
                                     <div className="space-y-2">
                                         <Field
                                             as="textarea"
@@ -108,8 +122,6 @@ const RSVP = ({ showOnlyForm = false }) => {
                                         />
                                         <ErrorMessage name="message" component="div" className="text-red-500 text-sm mt-1 text-center" />
                                     </div>
-
-                                   
 
                                     <button
                                         type="submit"

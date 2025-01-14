@@ -18,16 +18,11 @@ const Hebergement = () => {
     };
 
     const images = [
+        { src: '/images/Salle1.webp', alt: 'Grange de Fossillon' },
+        { src: '/images/Salle.webp', alt: 'Grange de Fossillon' },
         { src: '/images/H.webp', alt: 'Grange de Fossillon' },
-        { src: '/images/H1.webp', alt: 'Grange de Fossillon' },
-        { src: '/images/H2.webp', alt: 'Grange de Fossillon' },
-        { src: '/images/H3.webp', alt: 'Grange de Fossillon' },
-        { src: '/images/H4.webp', alt: 'Grange de Fossillon' },
         { src: '/images/H6.webp', alt: 'Grange de Fossillon' },
-        { src: '/images/H7.webp', alt: 'Grange de Fossillon' },
-        { src: '/images/H8.webp', alt: 'Grange de Fossillon' },
-        { src: '/images/H9.webp', alt: 'Grange de Fossillon' },
-
+      
         // Ajoutez d'autres images ici
     ];
 
