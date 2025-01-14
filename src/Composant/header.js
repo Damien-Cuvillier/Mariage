@@ -14,12 +14,12 @@ function Header() {
                             <span className="absolute left-0 right-0 bottom-0 border-b-2 border-gray-700 mt-1" />
                         )}
                     </Link>
-                    {/* <Link to="/lieu" className="relative text-gray-800 hover:font-bold transition-colors">
-                        Lieu
-                        {location.pathname === '/lieu' && (
+                    <Link to="/histoire" className="relative text-gray-800 hover:font-bold transition-colors">
+                        Notre histoire
+                        {location.pathname === '/histoire' && (
                             <span className="absolute left-0 right-0 bottom-0 border-b-2 border-gray-700 mt-1" />
                         )}
-                    </Link> */}
+                    </Link>
                     <Link to="/hebergement" className="relative text-gray-800 hover:font-bold transition-colors">
                         Hébergement
                         {location.pathname === '/hebergement' && (

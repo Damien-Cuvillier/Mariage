@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Church, GlassWater, Utensils, MapPin} from 'lucide-react';
-
+import Color from './Color';
 const Programme = () => {
   const balloonRef = useRef(null);
   const pathRef = useRef(null);
@@ -87,7 +87,7 @@ const Programme = () => {
 
       balloon.style.transform = `translate(${point.x}px, ${point.y + yOffset}px) translate(-50%, -50%)`;
 
-      progress += 0.002;
+      progress += 0.0012;
 
       if (progress >= 1) {
         progress = 0;
@@ -110,7 +110,9 @@ const Programme = () => {
   }, [timelineElements.length]);
 
   return (
+    
     <div className="container mx-auto px-6 py-8 relative">
+    
       <h2 className="text-2xl font-serif mb-16 text-center">Programme de la journée</h2>
       
       {/* SVG pour la ligne courbée avec le chemin de référence */}
@@ -151,18 +153,27 @@ const Programme = () => {
             {/* Point sur la ligne */}
             <div className={`absolute left-1/2 ${element.pointPosition} w-4 h-4 bg-gray-300 border-2 border-gray-300 rounded-full`} />
             
-            {/* Carte de contenu avec effet de nuage */}
-            <div className={`relative w-3/12 bg-white shadow-lg p-6 hover:shadow-xl transition-shadow rounded-3xl
-              ${index % 2 === 0 ? 'mr-auto' : 'ml-auto'} 
-              before:content-[''] before:absolute before:-inset-2 before:bg-blue-100 before:rounded-3xl before:shadow-lg before:-z-10`}
+            {/* Carte de contenu avec image de fond */}
+            <div 
+              className={`relative w-3/12 p-6 hover:shadow-xl transition-shadow rounded-3xl 
+                ${index % 2 === 0 ? 'mr-auto' : 'ml-auto'}`}
+              style={{
+                backgroundImage: "url('/images/Bagues.jpg')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+               
+              }}
             >
+              {/* Overlay pour assurer la lisibilité du texte */}
+              <div className="absolute inset-0 bg-white/20"></div>
+
               {/* Icône */}
-              <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center border border-gray-200">
+              <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center border border-gray-200 z-20">
                 {element.icon}
               </div>
 
               {/* Contenu */}
-              <div className="mt-8">
+              <div className="mt-8 relative z-10">
                 <div className="text-xl font-bold text-gray-800 mb-2">
                   {element.time}
                 </div>

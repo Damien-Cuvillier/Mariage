@@ -4,8 +4,9 @@ import Banner from './Composant/banner';
 import Programme from './Composant/Programme';
 import Description from './Composant/Description';
 import RSVP from './Composant/RSVP';
-// import Lieu from './Composant/Lieu';
+import Histoire from './Composant/Histoire';
 import Hebergement from './Composant/Hebergement';
+import Color from './Composant/Color';
 // Importez vos autres composants de page ici
 
 function App() {
@@ -20,11 +21,12 @@ function App() {
                             <>
                                 <Banner />
                                 <Description />
+                                <Color />
                                 <Programme />
                                 {/* Autres composants de la page d'accueil */}
                             </>
                         } />
-                        {/* <Route path="/lieu" element={<Lieu />} /> */}
+                        <Route path="/histoire" element={<Histoire />} />
                         <Route path="/hebergement" element={<Hebergement />} />
                         <Route path="/rsvp" element={<RSVP />} />
                     </Routes>
