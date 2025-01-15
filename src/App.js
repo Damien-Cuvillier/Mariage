@@ -17,7 +17,7 @@ function App() {
                 {/* Ajoutez un padding-top pour compenser le header fixe */}
                 <div className="pt-16">
                     <Routes>
-                        <Route path="/" element={
+                        <Route path="/Mariage" element={
                             <>
                                 <Banner />
                                 <Description />

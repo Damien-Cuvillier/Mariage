@@ -8,9 +8,9 @@ function Header() {
         <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
             <nav className="container mx-auto px-6 py-4">
                 <div className="flex items-center justify-center space-x-8">
-                    <Link to="/" className="relative text-gray-800 hover:font-bold transition-colors">
+                    <Link to="/Mariage" className="relative text-gray-800 hover:font-bold transition-colors">
                         Programme
-                        {location.pathname === '/' && (
+                        {location.pathname === '/Mariage' && (
                             <span className="absolute left-0 right-0 bottom-0 border-b-2 border-gray-700 mt-1" />
                         )}
                     </Link>
