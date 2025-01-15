@@ -18,12 +18,14 @@ jobs:
           node-version: '16'
           
       - name: Install Dependencies
-        run: npm install --legacy-peer-deps
-        # ou alternativement : npm install --force
+        run: |
+          npm install --legacy-peer-deps
+          npm install --save-dev @babel/plugin-proposal-private-property-in-object
         
       - name: Build
         env:
           REACT_APP_WEB3FORMS_KEY: ${{ secrets.REACT_APP_WEB3FORMS_KEY }}
+          CI: false  # Pour éviter que les warnings soient traités comme des erreurs
         run: npm run build
 
       - name: Deploy

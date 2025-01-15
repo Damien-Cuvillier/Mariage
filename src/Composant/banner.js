@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 
 function Banner() {
     const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-    const eventDate = new Date('2025-09-13T00:00:00');
+    const eventDate = useMemo(() => new Date('2025-09-13T14:00:00'), []);
 
     useEffect(() => {
         const interval = setInterval(() => {

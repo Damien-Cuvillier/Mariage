@@ -15,8 +15,40 @@ const RSVP = ({ showOnlyForm = false }) => {
     });
 
     const handleSubmit = async (values, { setSubmitting, resetForm }) => {
-        // ... votre logique handleSubmit reste identique ...
-    };
+        try {
+          console.log('Envoi avec la clé:', WEB3FORMS_KEY);
+          
+          const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              access_key: WEB3FORMS_KEY,
+              name: values.name,
+              email: values.email,
+              message: values.message,
+              subject: 'Les invités ont répondu'
+            }),
+          });
+    
+          const data = await response.json();
+          console.log('Réponse:', data);
+    
+          if (data.success) {
+            alert('Message envoyé avec succès !');
+            resetForm();
+          } else {
+            alert(`Erreur: ${data.message || 'Une erreur est survenue'}`);
+          }
+        } catch (error) {
+          console.error('Erreur détaillée:', error);
+          alert(`Erreur lors de l'envoi: ${error.message}`);
+        } finally {
+          setSubmitting(false);
+        }
+      };
 
     return (
         <>
