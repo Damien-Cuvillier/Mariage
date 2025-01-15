@@ -18,10 +18,10 @@ const Hebergement = () => {
     };
 
     const images = [
-        { src: '/images/Salle1.webp', alt: 'Grange de Fossillon' },
-        { src: '/images/Salle.webp', alt: 'Grange de Fossillon' },
-        { src: '/images/H.webp', alt: 'Grange de Fossillon' },
-        { src: '/images/H6.webp', alt: 'Grange de Fossillon' },
+        { src: process.env.PUBLIC_URL + '/images/Salle1.webp', alt: 'Grange de Fossillon' },
+        { src: process.env.PUBLIC_URL + '/images/Salle.webp', alt: 'Grange de Fossillon' },
+        { src: process.env.PUBLIC_URL + '/images/H.webp', alt: 'Grange de Fossillon' },
+        { src: process.env.PUBLIC_URL + '/images/H6.webp', alt: 'Grange de Fossillon' },
       
         // Ajoutez d'autres images ici
     ];
@@ -31,7 +31,7 @@ const Hebergement = () => {
         <div 
         className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-80"
         style={{
-          backgroundImage: "url('/images/Story.jpg')",
+          backgroundImage: `url(${process.env.PUBLIC_URL}/images/Story.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

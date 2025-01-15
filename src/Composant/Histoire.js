@@ -29,7 +29,7 @@ const Histoire = () => {
           </div>
           <div className="md:w-1/2 flex flex-row">
             <img 
-              src="/images/Reu.jpg" 
+              src={`${process.env.PUBLIC_URL}/images/Reu.jpg`}   
               alt="Nos années lycée" 
               className="rounded-lg shadow-lg w-40 h-64 object-contain hover:scale-105 transition-transform duration-300"
             />
@@ -49,7 +49,7 @@ const Histoire = () => {
           </div>
           <div className="md:w-1/2">
             <img 
-              src="/images/Nous2.jpg" 
+              src={`${process.env.PUBLIC_URL}/images/Nous2.jpg`}   
               alt="Nos retrouvailles" 
               className="rounded-lg shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
             />
@@ -69,18 +69,18 @@ const Histoire = () => {
           </div>
           <div className="md:w-1/2 space-y-4">
             <img 
-              src="/images/Nous.jpg" 
+              src={`${process.env.PUBLIC_URL}/images/Nous.jpg`}  
               alt="Notre famille" 
               className="rounded-lg shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
             />
             <div className="flex gap-4">
               <img 
-                src="/images/Mango.jpg" 
+                src={`${process.env.PUBLIC_URL}/images/Mango.jpg`}  
                 alt="Mango" 
                 className="rounded-lg shadow-lg w-1/2 h-32 object-cover hover:scale-105 transition-transform duration-300"
               />
               <img 
-                src="/images/Sora.jpg" 
+                src={`${process.env.PUBLIC_URL}/images/Sora.jpg`}   
                 alt="Sora" 
                 className="rounded-lg shadow-lg w-1/2 h-32 object-cover hover:scale-105 transition-transform duration-300"
               />

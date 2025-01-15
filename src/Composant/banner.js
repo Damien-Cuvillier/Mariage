@@ -56,7 +56,7 @@ function Banner() {
             <div className="flex justify-center items-center gap-8 flex-wrap">
                 <div className="relative">
                     <img 
-                        src="/images/photo1.jpg" 
+                        src={`${process.env.PUBLIC_URL}/images/Photo1.jpg`}  
                         alt="cérémonie laique" 
                         className="w-[500px] h-[400px] object-cover rounded-lg"
                     />
@@ -64,7 +64,7 @@ function Banner() {
                 </div>
                 <div className="relative">
                     <img 
-                        src="/images/photo2.jpg" 
+                        src={`${process.env.PUBLIC_URL}/images/Photo2.jpg`}  
                         alt="alliances" 
                         className="w-[500px] h-[400px] object-cover rounded-lg"
                     />
@@ -72,7 +72,7 @@ function Banner() {
                 </div>
                 <div className="relative">
                     <img 
-                        src="/images/photo3.jpg" 
+                        src={`${process.env.PUBLIC_URL}/images/Photo3.jpg`}  
                         alt="remerciements" 
                         className="w-[500px] h-[400px] object-cover rounded-lg"
                     />

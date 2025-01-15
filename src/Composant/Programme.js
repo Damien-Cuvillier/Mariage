@@ -11,7 +11,7 @@ const Programme = () => {
       title: 'Mairie, si vous en avez envie',
       location: '8 Pl. de la Mairie, 37260 Thilouze',
       mapLink: 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x47fd26bae9f4989b:0x1516dcaa43274098?sa=X&ved=1t:8290&ictx=111',
-      icon: '/images/kiss.png',
+      icon: process.env.PUBLIC_URL + '/images/kiss.png',
       pointPosition: 'translate-x-[8px] translate-y-[110px]'
     },
     {
@@ -19,35 +19,35 @@ const Programme = () => {
       title: 'Cérémonie laïque',
       location: 'Grange de Fossillon, 37110 Autrèche',
       mapLink: 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x47e34b524ab8663b:0x234d09a1d15e1399?sa=X&ved=1t:8290&ictx=111',
-      icon: '/images/rings.png',
+      icon: process.env.PUBLIC_URL + '/images/rings.png',
       pointPosition: 'translate-x-[280px] translate-y-[108px]'
     },
     {
       time: '17h',
       title: 'Cocktail',
       description: 'Vin d\'honneur et animations',
-      icon: '/images/cheers.png',
+      icon: process.env.PUBLIC_URL + '/images/cheers.png',
       pointPosition: 'translate-x-[-389px] translate-y-[90px]'
     },
     {
       time: '19h',
       title: 'Dîner',
       description: 'On va se régaler !',
-      icon: '/images/food.png',
+      icon: process.env.PUBLIC_URL + '/images/food.png',
       pointPosition: 'translate-x-[170px] translate-y-[0px]'
     },
     {
       time: '22h ',
       title: 'Festivités',
       description: 'Dansez jusqu\'au bout de la nuit',
-      icon: '/images/mirror-ball.png',
+      icon: process.env.PUBLIC_URL + '/images/mirror-ball.png',
       pointPosition: 'translate-x-[-268px] translate-y-[135px]'
     },
     {
       time: '12h ',
       title: 'Brunch du dimanche',
       description: 'Pour la récup',
-      icon: '/images/brunch.png',
+      icon: process.env.PUBLIC_URL + '/images/brunch.png',
       pointPosition: 'translate-x-[330px] translate-y-[105px]'
     }
   ];
@@ -139,7 +139,7 @@ const Programme = () => {
       <div 
         className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-80"
         style={{
-          backgroundImage: "url('/images/Color2.jpg')",
+          backgroundImage: `url(${process.env.PUBLIC_URL}/images/Color2.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -172,7 +172,7 @@ const Programme = () => {
   }}
 >
   <img 
-    src="/images/voyage.png" 
+    src={`${process.env.PUBLIC_URL}/images/voyage.png`} 
     alt="montgolfière"
     className="w-full h-full"
   />
