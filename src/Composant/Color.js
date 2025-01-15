@@ -3,9 +3,9 @@ import React from 'react';
 const Color = () => {
   const colors = [
     {
-      name: 'Bleu Clair',
-      hex: '#E6F3FF',
-      rgb: 'rgb(230, 243, 255)',
+      name: 'Rose',
+      hex: '#ff7676',
+      rgb: 'rgb(255, 118, 118)',
       
     },
     {
@@ -15,17 +15,35 @@ const Color = () => {
       
     },
     {
-      name: 'Blanc',
-      hex: '#FFFFFF',
-      rgb: 'rgb(255, 255, 255)',
+      name: 'Orange',
+      hex: '#ff6200',
+      rgb: 'rgb(255, 98, 0)',
       
-    }
+    },
+    {
+        name: 'Vert',
+        hex: '#45b648',
+        rgb: 'rgb(69, 182, 72)',
+        
+      },
+      {
+        name: 'Violet',
+        hex: '#8800ff',
+        rgb: 'rgb(136, 0, 255)',
+        
+      },
+      {
+        name: 'Jaune',
+        hex: '#e8e937',
+        rgb: 'rgb(232, 233, 55)',
+        
+      }
     // Ajoutez d'autres couleurs selon votre thème
   ];
 
   return (
-    <div className="container mx-auto px-6 py-16">
-      <h2 className="text-3xl font-serif text-center mb-16">Code Couleur du Mariage</h2>
+    <div className="container mx-auto px-6 py-6">
+      <h2 className="text-3xl font-bold text-center mb-16">Code Couleur du Mariage</h2>
       
       <div className="max-w-3xl mx-auto">
         <p className="text-center text-gray-600 mb-12">
@@ -41,7 +59,7 @@ const Color = () => {
             >
               {/* Cercle de couleur avec effet de hover */}
               <div 
-                className="w-32 h-32 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4 relative group"
+                className="w-20 h-20 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4 relative group"
                 style={{ 
                   backgroundColor: color.hex,
                   border: color.name === 'Blanc' ? '2px solid #E5E7EB' : 'none'

@@ -3,7 +3,17 @@ import React from 'react';
 const Histoire = () => {
   return (
     <div className="container mx-auto px-6 py-16">
-      <h2 className="text-3xl font-serif text-center mb-16">Notre Histoire</h2>
+     <div 
+        className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-80"
+        style={{
+          backgroundImage: "url('/images/flowers.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+        aria-hidden="true"
+      />
+      <h2 className="text-3xl font-bold text-center mb-16">Notre Histoire</h2>
 
       <div className="max-w-4xl mx-auto space-y-16">
         {/* Premier paragraphe avec image */}
@@ -19,14 +29,9 @@ const Histoire = () => {
           </div>
           <div className="md:w-1/2 flex flex-row">
             <img 
-              src="/images/Lea.jpg" 
+              src="/images/Reu.jpg" 
               alt="Nos années lycée" 
-              className="rounded-lg shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-            />
-            <img 
-              src="/images/Dam2.jpg" 
-              alt="Nos années lycée" 
-              className="rounded-lg shadow-lg w-[full] h-64 object-cover hover:scale-105 transition-transform duration-300"
+              className="rounded-lg shadow-lg w-40 h-64 object-contain hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>
@@ -35,7 +40,7 @@ const Histoire = () => {
         <div className="flex flex-col md:flex-row-reverse items-center gap-8">
           <div className="md:w-1/2">
             <p className="text-gray-700 leading-relaxed">
-              Nos routes se sont ensuite séparées pour les études supérieures - elle vers Le Mans, 
+              Nos routes se sont ensuite séparées pour les études supérieures - elle vers Rennes, 
               moi restant à Tours. Mais parfois, les plus belles histoires naissent des situations 
               les plus inattendues. C'est le nez cassé de notre ami commun qui a finalement créé 
               cette étincelle. De fil en aiguille, les discussions sont devenues plus longues, 

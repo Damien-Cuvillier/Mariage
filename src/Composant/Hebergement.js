@@ -28,7 +28,17 @@ const Hebergement = () => {
 
     return (
         <div className="container mx-auto px-6 py-4">
-            <h2 className="text-2xl font-serif mb-4 text-center">Hébergements</h2>
+        <div 
+        className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-80"
+        style={{
+          backgroundImage: "url('/images/Story.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+        aria-hidden="true"
+      />
+            <h2 className="text-2xl font-bold mb-4 text-center">Hébergements</h2>
             <Slider {...settings}>
                 {images.map((image, index) => (
                     <div key={index} className="flex justify-center">

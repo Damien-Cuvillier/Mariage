@@ -33,7 +33,7 @@ function Banner() {
 
     return (
         <div className="w-full p-8 text-center">
-            <h1 className="text-4xl mb-8 font-serif">Léa & Damien</h1>
+            <h1 className="text-4xl mb-8 font-bold">Léa & Damien</h1>
             {/* Compte à rebours */}
             <div className="flex justify-center items-center gap-8 mb-8">
                 <div className="flex flex-col items-center">
