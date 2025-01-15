@@ -6,68 +6,69 @@ const Color = () => {
       name: 'Rose',
       hex: '#ff7676',
       rgb: 'rgb(255, 118, 118)',
-      
     },
     {
       name: 'Bleu',
       hex: '#93C6FF',
       rgb: 'rgb(147, 198, 255)',
-      
     },
     {
       name: 'Orange',
       hex: '#ff6200',
       rgb: 'rgb(255, 98, 0)',
-      
     },
     {
-        name: 'Vert',
-        hex: '#45b648',
-        rgb: 'rgb(69, 182, 72)',
-        
-      },
-      {
-        name: 'Violet',
-        hex: '#8800ff',
-        rgb: 'rgb(136, 0, 255)',
-        
-      },
-      {
-        name: 'Jaune',
-        hex: '#e8e937',
-        rgb: 'rgb(232, 233, 55)',
-        
-      }
-    // Ajoutez d'autres couleurs selon votre thème
+      name: 'Vert',
+      hex: '#45b648',
+      rgb: 'rgb(69, 182, 72)',
+    },
+    {
+      name: 'Violet',
+      hex: '#8800ff',
+      rgb: 'rgb(136, 0, 255)',
+    },
+    {
+      name: 'Jaune',
+      hex: '#e8e937',
+      rgb: 'rgb(232, 233, 55)',
+    }
   ];
 
   return (
-    <div className="container mx-auto px-6 py-6">
-      <h2 className="text-3xl font-bold text-center mb-16">Code Couleur du Mariage</h2>
+    <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-16">
+        Code Couleur du Mariage
+      </h2>
       
       <div className="max-w-3xl mx-auto">
-        <p className="text-center text-gray-600 mb-12">
+        <p className="text-center text-gray-600 mb-8 sm:mb-12 px-4">
           Pour créer une harmonie visuelle lors de notre célébration, 
           voici les couleurs suggérées pour vos tenues.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Grille de couleurs responsive */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-8 px-4">
           {colors.map((color, index) => (
             <div 
               key={index}
-              className="flex flex-col items-center"
+              className="flex flex-col items-center relative"
             >
               {/* Cercle de couleur avec effet de hover */}
               <div 
-                className="w-20 h-20 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4 relative group"
+                className="w-16 sm:w-20 h-16 sm:h-20 rounded-full shadow-lg hover:shadow-xl 
+                         transition-all duration-300 mb-3 sm:mb-4 relative group cursor-pointer
+                         hover:scale-110"
                 style={{ 
                   backgroundColor: color.hex,
                   border: color.name === 'Blanc' ? '2px solid #E5E7EB' : 'none'
                 }}
               >
-                {/* Info bulle au hover */}
-                <div className="opacity-0 group-hover:opacity-100 absolute -bottom-16 left-1/2 transform -translate-x-1/2 bg-white p-2 rounded-md shadow-lg transition-opacity duration-300 whitespace-nowrap">
-                  <p className="text-sm">
+                {/* Info bulle au hover - Positionnement différent sur mobile */}
+                <div className="hidden sm:block opacity-0 group-hover:opacity-100 
+                            absolute -bottom-16 left-1/2 transform -translate-x-1/2 
+                            bg-white p-2 rounded-md shadow-lg transition-opacity 
+                            duration-300 whitespace-nowrap z-10">
+                  <p className="text-xs sm:text-sm">
                     HEX: {color.hex}<br />
                     RGB: {color.rgb}
                   </p>
@@ -75,17 +76,20 @@ const Color = () => {
               </div>
 
               {/* Nom de la couleur */}
-              <h3 className="text-lg font-semibold mb-2">
+              <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2">
                 {color.name}
               </h3>
 
-            
+              {/* Info couleur visible sur mobile */}
+              <div className="text-xs text-gray-500 text-center block sm:hidden">
+                {color.hex}
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 text-center text-gray-600">
-          <p className="italic">
+        <div className="mt-8 sm:mt-12 text-center text-gray-600 px-4">
+          <p className="italic text-sm sm:text-base">
             Ces couleurs sont données à titre indicatif pour vous guider dans vos choix vestimentaires.
           </p>
         </div>
