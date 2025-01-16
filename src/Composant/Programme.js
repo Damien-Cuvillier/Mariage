@@ -5,6 +5,7 @@ const Programme = () => {
   const balloonRef = useRef(null);
   const pathRef = useRef(null);
   const mobilePathRef = useRef(null);
+  const tabletPathRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   // Positions de référence pour chaque point
@@ -40,7 +41,7 @@ const Programme = () => {
       location: '8 Pl. de la Mairie, 37260 Thilouze',
       mapLink: 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x47fd26bae9f4989b:0x1516dcaa43274098?sa=X&ved=1t:8290&ictx=111',
       icon: process.env.PUBLIC_URL + '/images/kiss.png',
-      pointPosition: 'translate-x-[8px] translate-y-[110px]',
+      pointPosition: 'translate-x-[18px] translate-y-[110px]',
       
     },
     {
@@ -49,7 +50,7 @@ const Programme = () => {
       location: 'Grange de Fossillon, 37110 Autrèche',
       mapLink: 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x47e34b524ab8663b:0x234d09a1d15e1399?sa=X&ved=1t:8290&ictx=111',
       icon: process.env.PUBLIC_URL + '/images/rings.png',
-      pointPosition: 'translate-x-[255px] translate-y-[102px]',
+      pointPosition: 'translate-x-[282px] translate-y-[92px]',
       
     },
     {
@@ -57,7 +58,7 @@ const Programme = () => {
       title: 'Cocktail',
       description: 'Vin d\'honneur et animations',
       icon: process.env.PUBLIC_URL + '/images/cheers.png',
-      pointPosition: 'translate-x-[-389px] translate-y-[90px]',
+      pointPosition: 'translate-x-[-389px] translate-y-[70px]',
       
     },
     {
@@ -65,7 +66,7 @@ const Programme = () => {
       title: 'Dîner',
       description: 'On va se régaler !',
       icon: process.env.PUBLIC_URL + '/images/food.png',
-      pointPosition: 'translate-x-[170px] translate-y-[0px]',
+      pointPosition: 'translate-x-[170px] translate-y-[20px]',
       
     },
     {
@@ -73,7 +74,7 @@ const Programme = () => {
       title: 'Festivités',
       description: 'Dansez jusqu\'au bout de la nuit',
       icon: process.env.PUBLIC_URL + '/images/mirror-ball.png',
-      pointPosition: 'translate-x-[-250px] translate-y-[135px]',
+      pointPosition: 'translate-x-[-260px] translate-y-[135px]',
       
     },
     {
@@ -81,7 +82,7 @@ const Programme = () => {
       title: 'Brunch du dimanche',
       description: 'Pour la récup',
       icon: process.env.PUBLIC_URL + '/images/brunch.png',
-      pointPosition: 'translate-x-[260px] translate-y-[119px]',
+      pointPosition: 'translate-x-[260px] translate-y-[92px]',
      
     }
   ];
@@ -89,20 +90,21 @@ const Programme = () => {
   useEffect(() => {
     const balloon = balloonRef.current;
     const desktopPath = pathRef.current;
+    const tabletPath = tabletPathRef.current;
     const mobilePath = mobilePathRef.current;
     const isMobile = window.innerWidth < 640;
     const isTablet = window.innerWidth >= 640 && window.innerWidth < 1024;
     
-    if (!balloon || (!desktopPath && !mobilePath)) return;
+    if (!balloon || (!desktopPath && !mobilePath && !tabletPath)) return;
 
-    const path = isMobile ? mobilePath : desktopPath;
+    const path = isMobile ? mobilePath : isTablet ? tabletPath : desktopPath;
     const pathLength = path.getTotalLength();
     let progress = 0;
 
     const animate = () => {
       const currentLength = pathLength * progress;
       const point = path.getPointAtLength(currentLength);
-
+//mobile
       if (isMobile) {
         const screenScale = window.innerWidth / 390;
         const xOffset = -135 * screenScale;
@@ -113,7 +115,7 @@ const Programme = () => {
 
         if (progress < 0.2) {
           additionalXOffset = 10 * screenScale;
-          additionalYOffset = -60;
+          additionalYOffset = -40;
         } else if (progress < 0.4) {
           additionalXOffset = 20 * screenScale;
           additionalYOffset = -50 * screenScale;
@@ -134,40 +136,40 @@ const Programme = () => {
         }px, ${
           point.y + yOffset + additionalYOffset
         }px) translate(-50%, -50%) scale(${0.7 * screenScale})`;
-
+//tablette
       } else if (isTablet) {
-        // Animation tablette (peut être similaire au desktop avec des ajustements)
-        const xOffset = -80;
-        const yOffset = -10;
+        const screenScale = window.innerWidth / 768;
+        const xOffset = -100 * screenScale;
+        const yOffset = 50 * screenScale;
         
         let additionalXOffset = 0;
         let additionalYOffset = 0;
 
         if (progress < 0.2) {
-          additionalXOffset = 10;
-          additionalYOffset = 0;
+          additionalXOffset = 0 * screenScale;
+          additionalYOffset = 40 * screenScale;
         } else if (progress < 0.4) {
-          additionalXOffset = -20;
-          additionalYOffset = -30;
+          additionalXOffset = 0 * screenScale;
+          additionalYOffset = 20 * screenScale;
         } else if (progress < 0.6) {
-          additionalXOffset = 70;
-          additionalYOffset = -50;
+          additionalXOffset = 30 * screenScale;
+          additionalYOffset = -10 * screenScale;
         } else if (progress < 0.8) {
-          additionalXOffset = 50;
-          additionalYOffset = -200;
+          additionalXOffset = 10 * screenScale;
+          additionalYOffset = -40 * screenScale;
         } else {
           const finalPhaseProgress = (progress - 0.8) / 0.2;
-          additionalXOffset = 50 * (1 - finalPhaseProgress) + 50 * finalPhaseProgress;
-          additionalYOffset = -100 * (1 - finalPhaseProgress) + -300 * finalPhaseProgress;
+          additionalXOffset = (-10 * (1 - finalPhaseProgress) + -20 * finalPhaseProgress) * screenScale;
+          additionalYOffset = (-100 * (1 - finalPhaseProgress) + -130 * finalPhaseProgress) * screenScale;
         }
 
         balloon.style.transform = `translate(${
           point.x + xOffset + additionalXOffset
         }px, ${
           point.y + yOffset + additionalYOffset
-        }px) translate(-50%, -50%)`;
+        }px) translate(-50%, -50%) scale(${0.85 * screenScale})`;
+  //desktop
       } else {
-        // Animation desktop
         const xOffset = -80;
         const yOffset = -10;
         
@@ -175,21 +177,21 @@ const Programme = () => {
         let additionalYOffset = 0;
 
         if (progress < 0.2) {
-          additionalXOffset = 10;
+          additionalXOffset = -10;
           additionalYOffset = 0;
         } else if (progress < 0.4) {
-          additionalXOffset = -20;
-          additionalYOffset = -30;
+          additionalXOffset = 0;
+          additionalYOffset = -80;
         } else if (progress < 0.6) {
-          additionalXOffset = 70;
-          additionalYOffset = -50;
+          additionalXOffset = 0;
+          additionalYOffset = -180;
         } else if (progress < 0.8) {
           additionalXOffset = 50;
-          additionalYOffset = -200;
+          additionalYOffset = -350;
         } else {
           const finalPhaseProgress = (progress - 0.8) / 0.2;
-          additionalXOffset = 50 * (1 - finalPhaseProgress) + 50 * finalPhaseProgress;
-          additionalYOffset = -100 * (1 - finalPhaseProgress) + -300 * finalPhaseProgress;
+          additionalXOffset = 50 * (1 - finalPhaseProgress) + 150 * finalPhaseProgress;
+          additionalYOffset = -350 * (1 - finalPhaseProgress) + -450 * finalPhaseProgress;
         }
 
         balloon.style.transform = `translate(${
@@ -247,12 +249,29 @@ const Programme = () => {
       
       <h2 className="text-2xl font-bold mb-16 text-center">Programme de la journée</h2>
       
-      {/* SVG Desktop et Tablette */}
-      <div className="absolute left-1/2 top-24 -translate-x-1/2 h-full w-6/12 -z-10 hidden sm:block">
+      {/* SVG Desktop */}
+      <div className="absolute left-1/2 top-24 -translate-x-1/2 h-full w-6/12 -z-10 hidden lg:block">
         <svg className="h-full w-full" viewBox="0 0 800 1800" preserveAspectRatio="xMidYMid meet">
           <path
             ref={pathRef}
-            d="M410 100C391 375 771 437 759 259 674 93 148 525 767 476 589 832-27 306-130 701-50 1320 527 414 666 859 345 987 271 1402 490 1326 693 1162 29 1092 68 1295 515 1386 376 1747 865 1543"
+            d="M410 100C391 375 843 384 752 191 679 38 148 525 838 474 589 832-139 227-164 723-84 1284 527 414 714 896 345 987 277 1470 511 1367 706 1212 29 1092 27 1307 515 1386 376 1747 869 1513"
+            stroke="#a9a9a9"
+            strokeWidth="2"
+            fill="none"
+          />
+        </svg>
+      </div>
+
+      {/* SVG Tablette */}
+      <div className="absolute left-1/2 top-24 -translate-x-1/2 h-full w-8/12 -z-10 hidden sm:block lg:hidden">
+        <svg 
+          className="h-full w-full" 
+          viewBox="0 0 600 1500" 
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <path
+            ref={tabletPathRef}
+            d="M313 51C350 200 656 162 555 73 419-13 200 300 491 255 400 500 2 302 53 585 159 922 311 443 369 780 363 929 480 1284 564 1077 607 833 242 1306 165 1112 85 1339 254 1446 499 1345"
             stroke="#a9a9a9"
             strokeWidth="2"
             fill="none"
@@ -297,13 +316,13 @@ const Programme = () => {
             key={index} 
             className={`flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'} relative`}
           >
-            {/* Point avec position calculée */}
+            {/* Point avec position calculée - visible uniquement en desktop */}
             <div className={`absolute left-1/2 
               ${windowWidth < 768 
                 ? calculateMobilePosition(element.mobilePointPosition, windowWidth, index)
                 : element.pointPosition
               } 
-              md:w-4 md:h-4 w-2 h-2 bg-gray-400 border-2 border-gray-300 rounded-full`} 
+              hidden lg:block md:w-4 md:h-4 w-2 h-2 bg-gray-400 border-2 border-gray-300 rounded-full`} 
             />
             
             {/* Carte encore plus compacte sur mobile */}

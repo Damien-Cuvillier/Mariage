@@ -73,7 +73,7 @@ const RSVP = ({ showOnlyForm = false }) => {
                     >
                         {({ isSubmitting }) => (
                             <div className={`${showOnlyForm ? '' : 'min-h-screen'} flex items-center justify-center px-4 py-6 sm:py-8`}>
-                                <div className="Form w-full max-w-2xl bg-white/50 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-xl p-4 sm:p-8 mx-auto">
+                                <div className="Form w-full max-w-2xl bg-white/50 rounded-xl sm:rounded-2xl shadow-xl p-4 sm:p-8 mx-auto">
                                     <div className="text-center mb-6 sm:mb-8">
                                         <h2 id='contacts' className='text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-3 sm:mb-4'>
                                             Répondez SVP !
