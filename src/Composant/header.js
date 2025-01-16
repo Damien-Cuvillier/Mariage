@@ -43,7 +43,7 @@ function Header() {
                         className="text-gray-600 focus:outline-none"
                     >
                         <svg 
-                            className="w-6 h-6" 
+                            className="w-8 h-8" 
                             fill="none" 
                             stroke="currentColor" 
                             viewBox="0 0 24 24"
@@ -74,7 +74,7 @@ function Header() {
                             <Link
                                 key={item.path}
                                 to={item.path}
-                                className={`block px-4 py-3 text-gray-800 hover:bg-gray-50 ${
+                                className={`block px-4 py-3 text-gray-800 hover:bg-gray-150 ${
                                     location.pathname === item.path ? 'font-bold bg-gray-50' : ''
                                 }`}
                                 onClick={() => setIsMenuOpen(false)}
