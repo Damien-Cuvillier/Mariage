@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const calculateMobilePosition = (basePosition, screenWidth) => {
   // Largeur de référence (votre écran de développement)
-  const referenceWidth = 382;
+  const referenceWidth = 390;
   
   // Facteur d'échelle
   const scale = screenWidth / referenceWidth;
@@ -76,7 +76,7 @@ const Programme = () => {
       description: 'Pour la récup',
       icon: process.env.PUBLIC_URL + '/images/brunch.png',
       pointPosition: 'translate-x-[260px] translate-y-[119px]',
-      mobilePointPosition: 'translate-x-[-10px] translate-y-[81px]'
+      mobilePointPosition: 'translate-x-[-10px] translate-y-[84px]'
     }
   ];
 
@@ -113,14 +113,14 @@ const Programme = () => {
           additionalYOffset = -15 * screenScale;
         } else if (progress < 0.6) {
           additionalXOffset = 15 * screenScale;
-          additionalYOffset = -50 * screenScale;
+          additionalYOffset = -80 * screenScale;
         } else if (progress < 0.8) {
           additionalXOffset = 10 * screenScale;
-          additionalYOffset = -150 * screenScale;
+          additionalYOffset = -160 * screenScale;
         } else {
           const finalPhaseProgress = (progress - 0.8) / 0.2;
-          additionalXOffset = (15 * (1 - finalPhaseProgress) + 25 * finalPhaseProgress) * screenScale;
-          additionalYOffset = (-200 * (1 - finalPhaseProgress) + -200 * finalPhaseProgress) * screenScale;
+          additionalXOffset = (45 * (1 - finalPhaseProgress) + 45 * finalPhaseProgress) * screenScale;
+          additionalYOffset = (-240 * (1 - finalPhaseProgress) + -240 * finalPhaseProgress) * screenScale;
         }
 
         balloon.style.transform = `translate(${
@@ -332,7 +332,7 @@ const Programme = () => {
               </div>
 
               {/* Contenu avec texte encore plus petit sur mobile */}
-              <div className="mt-6">
+              <div className="mt-2">
                 <div className="md:text-xl text-sm font-bold text-gray-800 mb-1">
                   {element.time}
                 </div>
@@ -340,7 +340,7 @@ const Programme = () => {
                   {element.title}
                 </h3>
                 {element.location && (
-                  <div className="text-gray-600 mb-1 md:text-base text-[10px]">
+                  <div className="text-gray-600 mb-1 md:text-base text-[12px]">
                     {element.location}
                     <br />
                     <a
@@ -354,7 +354,7 @@ const Programme = () => {
                   </div>
                 )}
                 {element.description && (
-                  <p className="text-gray-600 md:text-base text-[10px]">{element.description}</p>
+                  <p className="text-gray-600 md:text-base text-[12px]">{element.description}</p>
                 )}
               </div>
             </div>

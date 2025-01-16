@@ -19,7 +19,7 @@ const Histoire = () => {
         {/* Premier paragraphe avec image */}
         <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
           <div className="w-full md:w-1/2">
-            <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-6 md:mb-0">
+            <p className="text-sm sm:text-base text-gray-900 leading-relaxed mb-6 md:mb-0">
               Le destin a parfois des chemins surprenants. Nous avons partagé les mêmes couloirs de collège 
               sans jamais vraiment nous croiser, ni même nous en souvenir. C'est au lycée que nos chemins 
               se sont rapprochés, partageant la même classe de terminale. À l'époque, nous échangions de 
@@ -39,7 +39,7 @@ const Histoire = () => {
         {/* Deuxième paragraphe avec image */}
         <div className="flex flex-col md:flex-row-reverse items-center gap-6 sm:gap-8">
           <div className="w-full md:w-1/2">
-            <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-6 md:mb-0">
+            <p className="text-sm sm:text-base text-gray-900 leading-relaxed mb-6 md:mb-0">
               Nos routes se sont ensuite séparées pour les études supérieures - elle vers Rennes, 
               moi restant à Tours. Mais parfois, les plus belles histoires naissent des situations 
               les plus inattendues. C'est le nez cassé de notre ami commun qui a finalement créé 
@@ -59,7 +59,7 @@ const Histoire = () => {
         {/* Troisième paragraphe avec image */}
         <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
           <div className="w-full md:w-1/2">
-            <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-6 md:mb-0">
+            <p className="text-sm sm:text-base text-gray-900 leading-relaxed mb-6 md:mb-0">
               Aujourd'hui, nous avons construit notre nid à Thilouze, partagé avec Mango, notre 
               fidèle compagnon à quatre pattes, et Sora, notre petit chat espiègle. Et c'est au 
               cœur de la nature, sur un rocher au milieu d'une rivière, que j'ai choisi de lui 
