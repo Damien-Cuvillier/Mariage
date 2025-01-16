@@ -139,7 +139,7 @@ const Programme = () => {
       <div 
         className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-80"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/images/Color2.jpg)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/images/Cadre.png)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -155,7 +155,7 @@ const Programme = () => {
           <path
             ref={pathRef}
             d="M410 100C391 375 771 437 759 259 674 93 148 525 767 476 589 832-27 306-130 701-50 1320 527 414 666 859 345 987 271 1402 490 1326 693 1162 29 1092 68 1295 515 1386 376 1747 865 1543"
-            stroke="#d6d6d6"
+            stroke="#a9a9a9"
             strokeWidth="2"
             fill="none"
           />
@@ -185,7 +185,7 @@ const Programme = () => {
             className={`flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'} relative`}
           >
             {/* Point sur la ligne */}
-            <div className={`absolute left-1/2 ${element.pointPosition} w-4 h-4 bg-gray-300 border-2 border-gray-300 rounded-full`} />
+            <div className={`absolute left-1/2 ${element.pointPosition} w-4 h-4 bg-gray-400 border-2 border-gray-300 rounded-full`} />
             
             {/* Carte de contenu avec couleurs de fond différentes */}
             <div className={`relative w-3/12 shadow-lg p-6 hover:shadow-xl transition-shadow rounded-3xl
