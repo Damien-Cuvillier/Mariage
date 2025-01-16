@@ -1,31 +1,37 @@
 import React, { useEffect, useRef, useState } from 'react';
 // import { Church, GlassWater, Utensils, MapPin} from 'lucide-react';
 
-const calculateMobilePosition = (basePosition, screenWidth) => {
-  // Largeur de référence (votre écran de développement)
-  const referenceWidth = 390;
-  
-  // Facteur d'échelle
-  const scale = screenWidth / referenceWidth;
-  
-  // Extraire les valeurs x et y de la chaîne de position
-  const [x, y] = basePosition
-    .match(/translate-x-\[(.*?)\].*?translate-y-\[(.*?)\]/)
-    .slice(1)
-    .map(val => parseFloat(val));
-  
-  // Ajuster les positions proportionnellement
-  const newX = x * scale;
-  const newY = y * scale;
-  
-  return `translate-x-[${newX}px] translate-y-[${newY}px]`;
-};
-
 const Programme = () => {
   const balloonRef = useRef(null);
   const pathRef = useRef(null);
   const mobilePathRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // Positions de référence pour chaque point
+  const referencePositions = {
+    0: { x: 20, y: 50 },     // Mairie
+    1: { x: 80, y: 0 },      // Cérémonie
+    2: { x: -85, y: 0 },     // Cocktail
+    3: { x: 80, y: 50 },     // Dîner
+    4: { x: -50, y: 90 },    // Festivités
+    5: { x: -10, y: 50 }     // Brunch
+  };
+
+  const calculateMobilePosition = (basePosition, screenWidth, index) => {
+    const referenceWidth = 390; // Votre largeur de référence actuelle
+    
+    // Obtenir les positions de référence pour ce point
+    const refPos = referencePositions[index];
+    
+    // Pour les écrans plus petits que la référence, ajuster proportionnellement
+    const scale = screenWidth < referenceWidth ? screenWidth / referenceWidth : 1;
+    
+    // Calculer les nouvelles positions
+    const newX = refPos.x * scale;
+    const newY = refPos.y; // Garder la position Y constante
+    
+    return `translate-x-[${newX}px] translate-y-[${newY}px]`;
+  };
 
   const timelineElements = [
     {
@@ -35,7 +41,7 @@ const Programme = () => {
       mapLink: 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x47fd26bae9f4989b:0x1516dcaa43274098?sa=X&ved=1t:8290&ictx=111',
       icon: process.env.PUBLIC_URL + '/images/kiss.png',
       pointPosition: 'translate-x-[8px] translate-y-[110px]',
-      mobilePointPosition: 'translate-x-[20px] translate-y-[80px]'
+      
     },
     {
       time: '16h',
@@ -44,7 +50,7 @@ const Programme = () => {
       mapLink: 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x47e34b524ab8663b:0x234d09a1d15e1399?sa=X&ved=1t:8290&ictx=111',
       icon: process.env.PUBLIC_URL + '/images/rings.png',
       pointPosition: 'translate-x-[255px] translate-y-[102px]',
-      mobilePointPosition: 'translate-x-[80px] translate-y-[0px]'
+      
     },
     {
       time: '17h',
@@ -52,7 +58,7 @@ const Programme = () => {
       description: 'Vin d\'honneur et animations',
       icon: process.env.PUBLIC_URL + '/images/cheers.png',
       pointPosition: 'translate-x-[-389px] translate-y-[90px]',
-      mobilePointPosition: 'translate-x-[-85px] translate-y-[0px]'
+      
     },
     {
       time: '19h',
@@ -60,7 +66,7 @@ const Programme = () => {
       description: 'On va se régaler !',
       icon: process.env.PUBLIC_URL + '/images/food.png',
       pointPosition: 'translate-x-[170px] translate-y-[0px]',
-      mobilePointPosition: 'translate-x-[80px] translate-y-[50px]'
+      
     },
     {
       time: '22h ',
@@ -68,7 +74,7 @@ const Programme = () => {
       description: 'Dansez jusqu\'au bout de la nuit',
       icon: process.env.PUBLIC_URL + '/images/mirror-ball.png',
       pointPosition: 'translate-x-[-250px] translate-y-[135px]',
-      mobilePointPosition: 'translate-x-[-50px] translate-y-[90px]'
+      
     },
     {
       time: '12h ',
@@ -76,7 +82,7 @@ const Programme = () => {
       description: 'Pour la récup',
       icon: process.env.PUBLIC_URL + '/images/brunch.png',
       pointPosition: 'translate-x-[260px] translate-y-[119px]',
-      mobilePointPosition: 'translate-x-[-10px] translate-y-[84px]'
+     
     }
   ];
 
@@ -98,7 +104,7 @@ const Programme = () => {
       const point = path.getPointAtLength(currentLength);
 
       if (isMobile) {
-        const screenScale = window.innerWidth / 382;
+        const screenScale = window.innerWidth / 390;
         const xOffset = -135 * screenScale;
         const yOffset = 100 * screenScale;
         
@@ -106,21 +112,21 @@ const Programme = () => {
         let additionalYOffset = 0;
 
         if (progress < 0.2) {
-          additionalXOffset = 5 * screenScale;
-          additionalYOffset = 0;
+          additionalXOffset = 10 * screenScale;
+          additionalYOffset = -60;
         } else if (progress < 0.4) {
-          additionalXOffset = 50 * screenScale;
-          additionalYOffset = -15 * screenScale;
+          additionalXOffset = 20 * screenScale;
+          additionalYOffset = -50 * screenScale;
         } else if (progress < 0.6) {
           additionalXOffset = 15 * screenScale;
           additionalYOffset = -80 * screenScale;
         } else if (progress < 0.8) {
           additionalXOffset = 10 * screenScale;
-          additionalYOffset = -160 * screenScale;
+          additionalYOffset = -150 * screenScale;
         } else {
           const finalPhaseProgress = (progress - 0.8) / 0.2;
           additionalXOffset = (45 * (1 - finalPhaseProgress) + 45 * finalPhaseProgress) * screenScale;
-          additionalYOffset = (-240 * (1 - finalPhaseProgress) + -240 * finalPhaseProgress) * screenScale;
+          additionalYOffset = (-150 * (1 - finalPhaseProgress) + -200 * finalPhaseProgress) * screenScale;
         }
 
         balloon.style.transform = `translate(${
@@ -226,7 +232,7 @@ const Programme = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-6 py-8 relative">
+    <div className="container mx-auto px-6 py-8 relative min-w-[320px]">
       {/* Background image avec pointer-events-none */}
       <div 
         className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-80"
@@ -255,19 +261,19 @@ const Programme = () => {
       </div>
 
       {/* SVG Mobile */}
-      <div className="absolute left-1/2 top-24 -translate-x-1/2 h-full w-full max-w-[400px] -z-10 sm:hidden">
+      <div className="absolute left-1/2 top-24 -translate-x-1/2 h-full w-full max-w-[400px] min-w-[320px] -z-10 sm:hidden">
         <svg 
           className="h-full w-full" 
           viewBox="0 0 400 1200" 
           preserveAspectRatio="xMidYMid meet"
           style={{
-            transform: 'scale(0.9)', // Ajustement global de l'échelle
+            transform: `scale(${Math.min(windowWidth / 382, 1.2)})`,
             transformOrigin: 'center center'
           }}
         >
           <path
             ref={mobilePathRef}
-            d="M220 63C256 170 438 134 371 52 298-19 254 114 321 202 267 354 102 171 90 400 81 626 446 320 326 588 321.6667 669.6667 256 957 372 851 459 726 230 898 185 842-12 1098 124 1126 333 1051"
+            d="M225 110C256 170 438 134 371 52 298-19 254 114 324 259 267 354 102 171 90 400 81 626 446 320 326 588 321.6667 669.6667 256 957 372 851 459 726 230 898 185 842 121 860 45 1019 256 985"
             stroke="#a9a9a9"
             strokeWidth="2"
             fill="none"
@@ -291,10 +297,10 @@ const Programme = () => {
             key={index} 
             className={`flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'} relative`}
           >
-            {/* Point avec position conditionnelle */}
+            {/* Point avec position calculée */}
             <div className={`absolute left-1/2 
-              ${windowWidth < 640 
-                ? calculateMobilePosition(element.mobilePointPosition, windowWidth)
+              ${windowWidth < 768 
+                ? calculateMobilePosition(element.mobilePointPosition, windowWidth, index)
                 : element.pointPosition
               } 
               md:w-4 md:h-4 w-2 h-2 bg-gray-400 border-2 border-gray-300 rounded-full`} 
