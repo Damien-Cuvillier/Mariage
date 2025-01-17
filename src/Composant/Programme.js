@@ -239,7 +239,7 @@ const Programme = () => {
       <div 
         className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-80"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/images/Cadre.png)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/images/Cadre3.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -255,7 +255,7 @@ const Programme = () => {
           <path
             ref={pathRef}
             d="M410 100C391 375 843 384 752 191 679 38 148 525 838 474 589 832-139 227-164 723-84 1284 527 414 714 896 345 987 277 1470 511 1367 706 1212 29 1092 27 1307 515 1386 376 1747 869 1513"
-            stroke="#a9a9a9"
+            stroke="#0a0a0a"
             strokeWidth="2"
             fill="none"
           />
@@ -272,7 +272,7 @@ const Programme = () => {
           <path
             ref={tabletPathRef}
             d="M313 51C350 200 656 162 555 73 419-13 200 300 491 255 400 500 2 302 53 585 159 922 311 443 369 780 363 929 480 1284 564 1077 607 833 242 1306 165 1112 85 1339 254 1446 499 1345"
-            stroke="#a9a9a9"
+            stroke="#0a0a0a"
             strokeWidth="2"
             fill="none"
           />
@@ -293,7 +293,7 @@ const Programme = () => {
           <path
             ref={mobilePathRef}
             d="M225 110C256 170 438 134 371 52 298-19 254 114 324 259 267 354 102 171 90 400 81 626 446 320 326 588 321.6667 669.6667 256 957 372 851 459 726 230 898 185 842 121 860 45 1019 256 985"
-            stroke="#a9a9a9"
+            stroke="#0a0a0a"
             strokeWidth="2"
             fill="none"
           />
@@ -322,7 +322,7 @@ const Programme = () => {
                 ? calculateMobilePosition(element.mobilePointPosition, windowWidth, index)
                 : element.pointPosition
               } 
-              hidden lg:block md:w-4 md:h-4 w-2 h-2 bg-gray-400 border-2 border-gray-300 rounded-full`} 
+              hidden lg:block md:w-4 md:h-4 w-2 h-2 bg-black border-2 border-gray-300 rounded-full`} 
             />
             
             {/* Carte encore plus compacte sur mobile */}

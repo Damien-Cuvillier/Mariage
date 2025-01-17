@@ -6,7 +6,7 @@ const Histoire = () => {
       <div 
         className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-80"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/images/flowers.jpg)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/images/Story.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
