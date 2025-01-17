@@ -3,35 +3,40 @@ import React from 'react';
 const Color = () => {
   const colors = [
     {
-      name: 'Rose',
-      hex: '#ff7676',
-      rgb: 'rgb(255, 118, 118)',
-    },
-    {
-      name: 'Bleu',
-      hex: '#93C6FF',
-      rgb: 'rgb(147, 198, 255)',
-    },
-    {
-      name: 'Orange',
-      hex: '#ff6200',
-      rgb: 'rgb(255, 98, 0)',
-    },
-    {
-      name: 'Vert',
-      hex: '#45b648',
-      rgb: 'rgb(69, 182, 72)',
-    },
-    {
-      name: 'Violet',
-      hex: '#8800ff',
-      rgb: 'rgb(136, 0, 255)',
+      name: 'Rouge',
+      hex: '#960018',
+      rgb: 'rgb(150, 0, 24)',
     },
     {
       name: 'Jaune',
-      hex: '#e8e937',
-      rgb: 'rgb(232, 233, 55)',
-    }
+      hex: '#FFD700',
+      rgb: 'rgb(255, 215, 0)',
+    },
+    
+    {
+      name: 'Vert',
+      hex: '#006C2E',
+      rgb: 'rgb(0, 108, 46)',
+    },
+    {
+      name: 'Fushia',
+      hex: '#E80564',
+      rgb: 'rgb(232, 5, 100)',
+    },
+   
+   
+    {
+      name: 'Violet',
+      hex: '#6A026E',
+      rgb: 'rgb(106, 2, 110)',
+    },
+   
+    {
+      name: 'Bleu',
+      hex: '#361FDB',
+      rgb: 'rgb(54, 31, 219)',
+    },
+  
   ];
 
   return (

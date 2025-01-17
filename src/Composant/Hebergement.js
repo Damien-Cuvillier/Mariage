@@ -37,7 +37,7 @@ const Hebergement = () => {
             <div 
                 className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-80"
                 style={{
-                    backgroundImage: `url(${process.env.PUBLIC_URL}/images/Cadre2.jpg)`,
+                    backgroundImage: `url(${process.env.PUBLIC_URL}/images/Color.jpg)`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',

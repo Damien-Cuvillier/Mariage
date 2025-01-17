@@ -57,7 +57,7 @@ const RSVP = ({ showOnlyForm = false }) => {
                 <div 
                     className="fixed inset-0 w-full h-full pointer-events-none -z-10 opacity-90"
                     style={{
-                        backgroundImage: `url(${process.env.PUBLIC_URL}/images/Color.jpg)`,
+                        backgroundImage: `url(${process.env.PUBLIC_URL}/images/Cadre2.jpg)`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',

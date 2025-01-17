@@ -222,6 +222,7 @@ const Programme = () => {
       balloon.style.opacity = '1';
     };
   }, []);
+//#E80564 232,5,100
 
   useEffect(() => {
     const handleResize = () => {
@@ -330,23 +331,23 @@ const Programme = () => {
               ${index % 2 === 0 ? 'mr-auto' : 'ml-auto'} 
               before:content-[''] before:absolute before:-inset-2 before:rounded-3xl before:shadow-lg before:-z-10
               ${
-                index === 0 ? 'md:left-1/4 left-[10%] bg-pink-100 before:bg-pink-300' :
-                index === 1 ? 'md:mr-16 mr-4 bg-purple-100 before:bg-purple-300' :
-                index === 2 ? 'bg-orange-100 before:bg-orange-300' :
-                index === 3 ? 'md:mr-60 mr-12 bg-yellow-100 before:bg-yellow-300' :
-                index === 4 ? 'md:ml-24 ml-6 mt-12 bg-green-100 before:bg-green-300' :
-                'md:mr-20 mr-4 bg-blue-100 before:bg-blue-300'
+                index === 0 ? 'md:left-1/4 left-[10%] bg-red-200 before:bg-red-800' :
+                index === 1 ? 'md:mr-20 mr-4 bg-yellow-100 before:bg-yellow-400' :
+                index === 2 ? 'ml-12 bg-green-100 before:bg-green-800' :
+                index === 3 ? 'md:mr-60 mr-12 bg-pink-200 before:bg-pink-600' :
+                index === 4 ? 'md:ml-24 ml-6 mt-12 bg-fuchsia-200 before:bg-fuchsia-800' :
+                'md:mr-20 mr-4 bg-blue-200 before:bg-blue-700'
               }`}
             >
               {/* Icône encore plus petite sur mobile */}
               <div className={`absolute -top-6 left-1/2 -translate-x-1/2 md:w-16 md:h-16 w-10 h-10 rounded-full shadow-lg flex items-center justify-center border border-gray-200 overflow-hidden
                 ${
-                  index === 0 ? 'bg-pink-300' :
-                  index === 1 ? 'bg-purple-300' :
-                  index === 2 ? 'bg-orange-300' :
-                  index === 3 ? 'bg-yellow-300' :
-                  index === 4 ? 'bg-green-300' :
-                  'bg-blue-300'
+                  index === 0 ? 'bg-red-800' :
+                  index === 1 ? 'bg-yellow-400' :
+                  index === 2 ? 'bg-green-800' :
+                  index === 3 ? 'bg-pink-600' :
+                  index === 4 ? 'bg-fuchsia-800' :
+                  'bg-blue-700'
                 }`}
               >
                 <img 
