@@ -55,7 +55,7 @@ const RSVP = ({ showOnlyForm = false }) => {
             <Banner />
             <div className="relative min-h-screen">
                 <div 
-                    className="fixed inset-0 w-full h-full pointer-events-none -z-10 opacity-80"
+                    className="fixed inset-0 w-full h-full pointer-events-none -z-10 opacity-90"
                     style={{
                         backgroundImage: `url(${process.env.PUBLIC_URL}/images/Color.jpg)`,
                         backgroundSize: 'cover',
@@ -65,7 +65,7 @@ const RSVP = ({ showOnlyForm = false }) => {
                     aria-hidden="true"
                 />
 
-                <div className={`contact-form-section ${showOnlyForm ? '' : 'min-h-screen'} mt-8 sm:mt-12`}>
+                <div className={`contact-form-section ${showOnlyForm ? '' : 'min-h-screen'} mt-8 sm:mt-8`}>
                     <Formik
                         initialValues={{ name: '', email: '', message: '', address: '', alim: '' }}
                         validationSchema={validationSchema}

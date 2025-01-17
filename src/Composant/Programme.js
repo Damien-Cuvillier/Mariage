@@ -237,7 +237,7 @@ const Programme = () => {
     <div className="container mx-auto px-6 py-8 relative min-w-[320px]">
       {/* Background image avec pointer-events-none */}
       <div 
-        className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-80"
+        className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-90 "
         style={{
           backgroundImage: `url(${process.env.PUBLIC_URL}/images/Cadre3.jpg)`,
           backgroundSize: 'cover',

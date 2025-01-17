@@ -41,7 +41,7 @@ const Color = () => {
       </h2>
       
       <div className="max-w-3xl mx-auto">
-        <p className="text-center text-gray-600 mb-8 sm:mb-12 px-4">
+        <p className="text-center text-gray-800 mb-8 sm:mb-12 px-4">
           Pour créer une harmonie visuelle lors de notre célébration, 
           voici les couleurs suggérées pour vos tenues.
         </p>
@@ -63,16 +63,7 @@ const Color = () => {
                   border: color.name === 'Blanc' ? '2px solid #E5E7EB' : 'none'
                 }}
               >
-                {/* Info bulle au hover - Positionnement différent sur mobile */}
-                <div className="hidden sm:block opacity-0 group-hover:opacity-100 
-                            absolute -bottom-16 left-1/2 transform -translate-x-1/2 
-                            bg-white p-2 rounded-md shadow-lg transition-opacity 
-                            duration-300 whitespace-nowrap z-10">
-                  <p className="text-xs sm:text-sm">
-                    HEX: {color.hex}<br />
-                    RGB: {color.rgb}
-                  </p>
-                </div>
+              
               </div>
 
               {/* Nom de la couleur */}
@@ -80,15 +71,12 @@ const Color = () => {
                 {color.name}
               </h3>
 
-              {/* Info couleur visible sur mobile */}
-              <div className="text-xs text-gray-500 text-center block sm:hidden">
-                {color.hex}
-              </div>
+        
             </div>
           ))}
         </div>
 
-        <div className="mt-8 sm:mt-12 text-center text-gray-600 px-4">
+        <div className="mt-8 sm:mt-14 text-center text-gray-800 px-4">
           <p className="italic text-sm sm:text-base">
             Ces couleurs sont données à titre indicatif pour vous guider dans vos choix vestimentaires.
           </p>

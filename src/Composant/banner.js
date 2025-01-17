@@ -26,13 +26,13 @@ function Banner() {
     }, [eventDate]);
 
     return (
-        <div className="w-full p-4 md:p-8 text-center mt-16 md:mt-20">
+        <div className="w-full p-4 md:p-8 text-center mt-8 md:mt-8">
             {/* Titre responsive */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl mb-6 md:mb-8 font-bold">Léa & Damien</h1>
 
             {/* Compte à rebours responsive */}
             <div className="grid grid-cols-2 md:flex md:justify-center items-center gap-4 md:gap-8 mb-6 md:mb-8 max-w-xs md:max-w-none mx-auto">
-                <div className="flex flex-col items-center p-2 md:p-4 bg-white/80 rounded-lg shadow-sm">
+                <div className="flex flex-col items-center p-2 md:p-4 bg-white/50 rounded-lg shadow-sm">
                     <span className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">{countdown.days}</span>
                     <span className="text-sm md:text-lg text-gray-600">jours</span>
                 </div>
@@ -40,11 +40,11 @@ function Banner() {
                     <span className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">{countdown.hours}</span>
                     <span className="text-sm md:text-lg text-gray-600">heures</span>
                 </div>
-                <div className="flex flex-col items-center p-2 md:p-4 bg-white/80 rounded-lg shadow-sm">
+                <div className="flex flex-col items-center p-2 md:p-4 bg-white/50 rounded-lg shadow-sm">
                     <span className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">{countdown.minutes}</span>
                     <span className="text-sm md:text-lg text-gray-600">minutes</span>
                 </div>
-                <div className="flex flex-col items-center p-2 md:p-4 bg-white/80 rounded-lg shadow-sm">
+                <div className="flex flex-col items-center p-2 md:p-4 bg-white/50 rounded-lg shadow-sm">
                     <span className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">{countdown.seconds}</span>
                     <span className="text-sm md:text-lg text-gray-600">secondes</span>
                 </div>
