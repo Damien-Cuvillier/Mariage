@@ -3,9 +3,9 @@ import React from 'react';
 const Color = () => {
   const colors = [
     {
-      name: 'Rouge',
-      hex: '#960018',
-      rgb: 'rgb(150, 0, 24)',
+      name: 'Orange',
+      hex: '#fb4c0d',
+      rgb: 'rgb(251, 76, 13)',
     },
     {
       name: 'Jaune',

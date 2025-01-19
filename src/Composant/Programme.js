@@ -238,9 +238,9 @@ const Programme = () => {
     <div className="container mx-auto px-6 py-8 relative min-w-[320px]">
       {/* Background image avec pointer-events-none */}
       <div 
-        className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-90 "
+        className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-100 "
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/images/Cadre3.jpg)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/images/test4.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -331,7 +331,7 @@ const Programme = () => {
               ${index % 2 === 0 ? 'mr-auto' : 'ml-auto'} 
               before:content-[''] before:absolute before:-inset-2 before:rounded-3xl before:shadow-lg before:-z-10
               ${
-                index === 0 ? 'md:left-1/4 left-[10%] bg-red-200 before:bg-red-800' :
+                index === 0 ? 'md:left-1/4 left-[10%] bg-orange-200 before:bg-orange-600' :
                 index === 1 ? 'md:mr-20 mr-4 bg-yellow-100 before:bg-yellow-400' :
                 index === 2 ? 'ml-12 bg-green-100 before:bg-green-800' :
                 index === 3 ? 'md:mr-60 mr-12 bg-pink-200 before:bg-pink-600' :
@@ -342,7 +342,7 @@ const Programme = () => {
               {/* Icône encore plus petite sur mobile */}
               <div className={`absolute -top-6 left-1/2 -translate-x-1/2 md:w-16 md:h-16 w-10 h-10 rounded-full shadow-lg flex items-center justify-center border border-gray-200 overflow-hidden
                 ${
-                  index === 0 ? 'bg-red-800' :
+                  index === 0 ? 'bg-orange-600' :
                   index === 1 ? 'bg-yellow-400' :
                   index === 2 ? 'bg-green-800' :
                   index === 3 ? 'bg-pink-600' :
