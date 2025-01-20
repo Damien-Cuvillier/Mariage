@@ -35,9 +35,9 @@ const Hebergement = () => {
     return (
         <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-8">
             <div 
-                className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-80"
+                className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-100"
                 style={{
-                    backgroundImage: `url(${process.env.PUBLIC_URL}/images/Color.jpg)`,
+                    backgroundImage: `url(${process.env.PUBLIC_URL}/images/test6.webp)`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',

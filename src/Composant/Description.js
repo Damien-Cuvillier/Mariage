@@ -15,19 +15,19 @@ const Description = () => {
             {/* Conteneur pour le texte avec largeur maximale */}
             <div className="max-w-2xl mx-auto">
                 {/* Paragraphes responsifs */}
-                <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-900 mb-3 sm:mb-4 leading-relaxed">
                     Nous sommes ravis de vous accueillir pour célébrer notre union. 
                     Voici le programme de la journée, où vous trouverez tous les détails 
                     concernant les événements prévus. 
                 </p>
-                <p className="text-sm sm:text-base text-gray-700 pb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-900 pb-4 leading-relaxed">
                     N'hésitez pas à nous contacter si vous avez des questions. 
                     Nous avons hâte de partager ce moment spécial avec vous !
                 </p>
 
                 {/* Message RSVP avec animation */}
                 <div className="transform hover:scale-105 transition-transform duration-300">
-                    <span className="block text-lg sm:text-xl font-bold mb-6 sm:mb-8 text-gray-800">
+                    <span className="block text-lg sm:text-xl font-bold mb-6 sm:mb-8 text-gray-900">
                         Merci de répondre sur l'onglet RSVP
                     </span>
                 </div>

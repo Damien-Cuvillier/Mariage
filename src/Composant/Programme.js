@@ -40,7 +40,7 @@ const Programme = () => {
       title: 'Mairie, si vous en avez envie',
       location: '8 Pl. de la Mairie, 37260 Thilouze',
       mapLink: 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x47fd26bae9f4989b:0x1516dcaa43274098?sa=X&ved=1t:8290&ictx=111',
-      icon: process.env.PUBLIC_URL + '/images/kiss.png',
+      icon: process.env.PUBLIC_URL + '/images/kiss.webp',
       pointPosition: 'translate-x-[18px] translate-y-[110px]',
       
     },
@@ -49,7 +49,7 @@ const Programme = () => {
       title: 'Cérémonie laïque',
       location: 'Grange de Fossillon, 37110 Autrèche',
       mapLink: 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x47e34b524ab8663b:0x234d09a1d15e1399?sa=X&ved=1t:8290&ictx=111',
-      icon: process.env.PUBLIC_URL + '/images/rings.png',
+      icon: process.env.PUBLIC_URL + '/images/rings.webp',
       pointPosition: 'translate-x-[282px] translate-y-[92px]',
       
     },
@@ -57,7 +57,7 @@ const Programme = () => {
       time: '17h',
       title: 'Cocktail',
       description: 'Vin d\'honneur et animations',
-      icon: process.env.PUBLIC_URL + '/images/cheers.png',
+      icon: process.env.PUBLIC_URL + '/images/cheers.webp',
       pointPosition: 'translate-x-[-389px] translate-y-[70px]',
       
     },
@@ -65,7 +65,7 @@ const Programme = () => {
       time: '19h',
       title: 'Dîner',
       description: 'On va se régaler !',
-      icon: process.env.PUBLIC_URL + '/images/food.png',
+      icon: process.env.PUBLIC_URL + '/images/food.webp',
       pointPosition: 'translate-x-[170px] translate-y-[20px]',
       
     },
@@ -73,7 +73,7 @@ const Programme = () => {
       time: '22h ',
       title: 'Festivités',
       description: 'Dansez jusqu\'au bout de la nuit',
-      icon: process.env.PUBLIC_URL + '/images/mirror-ball.png',
+      icon: process.env.PUBLIC_URL + '/images/mirror-ball.webp',
       pointPosition: 'translate-x-[-260px] translate-y-[135px]',
       
     },
@@ -81,7 +81,7 @@ const Programme = () => {
       time: '12h ',
       title: 'Brunch du dimanche',
       description: 'Pour la récup',
-      icon: process.env.PUBLIC_URL + '/images/brunch.png',
+      icon: process.env.PUBLIC_URL + '/images/brunch.webp',
       pointPosition: 'translate-x-[260px] translate-y-[92px]',
      
     }
@@ -93,7 +93,7 @@ const Programme = () => {
     const tabletPath = tabletPathRef.current;
     const mobilePath = mobilePathRef.current;
     const isMobile = window.innerWidth < 640;
-    const isTablet = window.innerWidth >= 640 && window.innerWidth < 1024;
+    const isTablet = window.innerWidth >= 640 && window.innerWidth <= 1024;
     
     if (!balloon || (!desktopPath && !mobilePath && !tabletPath)) return;
 
@@ -138,7 +138,7 @@ const Programme = () => {
         }px) translate(-50%, -50%) scale(${0.7 * screenScale})`;
 //tablette
       } else if (isTablet) {
-        const screenScale = window.innerWidth / 768;
+        const screenScale = window.innerWidth / 1024;
         const xOffset = -100 * screenScale;
         const yOffset = 50 * screenScale;
         
@@ -240,7 +240,7 @@ const Programme = () => {
       <div 
         className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-100 "
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/images/test4.jpg)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/images/test4.webp)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -263,8 +263,8 @@ const Programme = () => {
         </svg>
       </div>
 
-      {/* SVG Tablette */}
-      <div className="absolute left-1/2 top-24 -translate-x-1/2 h-full w-8/12 -z-10 hidden sm:block lg:hidden">
+      {/* SVG Tablette - ajusté pour 1024px */}
+      <div className="absolute left-1/2 top-24 -translate-x-1/2 h-full w-9/12 -z-10 hidden sm:block lg:hidden">
         <svg 
           className="h-full w-full" 
           viewBox="0 0 600 1500" 
@@ -308,7 +308,7 @@ const Programme = () => {
           transformOrigin: 'center center',
           transform: 'translate(-50%, -50%)'
         }}>
-        <img src={`${process.env.PUBLIC_URL}/images/voyage.png`} alt="montgolfière" className="w-full h-full" />
+        <img src={`${process.env.PUBLIC_URL}/images/voyage.webp`} alt="montgolfière" className="w-full h-full" />
       </div>
 
       <div className="space-y-4">

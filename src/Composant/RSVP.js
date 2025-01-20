@@ -55,9 +55,9 @@ const RSVP = ({ showOnlyForm = false }) => {
             <Banner />
             <div className="relative min-h-screen">
                 <div 
-                    className="fixed inset-0 w-full h-full pointer-events-none -z-10 opacity-90"
+                    className="fixed inset-0 w-full h-full pointer-events-none -z-10 opacity-100"
                     style={{
-                        backgroundImage: `url(${process.env.PUBLIC_URL}/images/Cadre2.jpg)`,
+                        backgroundImage: `url(${process.env.PUBLIC_URL}/images/test6.webp)`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',

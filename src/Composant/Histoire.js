@@ -4,9 +4,9 @@ const Histoire = () => {
   return (
     <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-8">
       <div 
-        className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-80"
+        className="fixed inset-0 w-full h-full pointer-events-none -z-30 opacity-100"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/images/Story.jpg)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/images/test4.webp)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -29,7 +29,7 @@ const Histoire = () => {
           </div>
           <div className="w-full md:w-1/2 flex justify-center">
             <img 
-              src={`${process.env.PUBLIC_URL}/images/Reu.jpg`}   
+              src={`${process.env.PUBLIC_URL}/images/Reu.webp`}   
               alt="Nos années lycée" 
               className="rounded-lg shadow-lg w-32 sm:w-40 h-48 sm:h-64 object-contain hover:scale-105 transition-transform duration-300"
             />
@@ -49,7 +49,7 @@ const Histoire = () => {
           </div>
           <div className="w-full md:w-1/2">
             <img 
-              src={`${process.env.PUBLIC_URL}/images/Nous2.jpg`}   
+              src={`${process.env.PUBLIC_URL}/images/Nous2.webp`}   
               alt="Nos retrouvailles" 
               className="rounded-lg shadow-lg w-full h-48 sm:h-64 object-cover hover:scale-105 transition-transform duration-300"
             />
@@ -69,18 +69,18 @@ const Histoire = () => {
           </div>
           <div className="w-full md:w-1/2 space-y-4">
             <img 
-              src={`${process.env.PUBLIC_URL}/images/Nous.jpg`}  
+              src={`${process.env.PUBLIC_URL}/images/Nous.webp`}  
               alt="Notre famille" 
               className="rounded-lg shadow-lg w-full h-48 sm:h-64 object-cover hover:scale-105 transition-transform duration-300"
             />
             <div className="flex gap-4">
               <img 
-                src={`${process.env.PUBLIC_URL}/images/Mango.jpg`}  
+                src={`${process.env.PUBLIC_URL}/images/Mango.webp`}  
                 alt="Mango" 
                 className="rounded-lg shadow-lg w-1/2 h-24 sm:h-32 object-cover hover:scale-105 transition-transform duration-300"
               />
               <img 
-                src={`${process.env.PUBLIC_URL}/images/Sora.jpg`}   
+                src={`${process.env.PUBLIC_URL}/images/Sora.webp`}   
                 alt="Sora" 
                 className="rounded-lg shadow-lg w-1/2 h-24 sm:h-32 object-cover hover:scale-105 transition-transform duration-300"
               />

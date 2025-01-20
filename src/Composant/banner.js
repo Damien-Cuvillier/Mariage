@@ -36,7 +36,7 @@ function Banner() {
                     <span className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">{countdown.days}</span>
                     <span className="text-sm md:text-lg text-gray-600">jours</span>
                 </div>
-                <div className="flex flex-col items-center p-2 md:p-4 bg-white/80 rounded-lg shadow-sm">
+                <div className="flex flex-col items-center p-2 md:p-4 bg-white/50 rounded-lg shadow-sm">
                     <span className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">{countdown.hours}</span>
                     <span className="text-sm md:text-lg text-gray-600">heures</span>
                 </div>

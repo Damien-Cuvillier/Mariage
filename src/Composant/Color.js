@@ -46,7 +46,7 @@ const Color = () => {
       </h2>
       
       <div className="max-w-3xl mx-auto">
-        <p className="text-center text-gray-800 mb-8 sm:mb-12 px-4">
+        <p className="text-center text-gray-900 mb-8 sm:mb-12 px-4">
           Pour créer une harmonie visuelle lors de notre célébration, 
           voici les couleurs suggérées pour vos tenues.
         </p>
@@ -81,7 +81,7 @@ const Color = () => {
           ))}
         </div>
 
-        <div className="mt-8 sm:mt-14 text-center text-gray-800 px-4">
+        <div className="mt-8 sm:mt-14 text-center text-gray-900 px-4">
           <p className="italic text-sm sm:text-base">
             Ces couleurs sont données à titre indicatif pour vous guider dans vos choix vestimentaires.
           </p>
