@@ -37,7 +37,7 @@ const Programme = () => {
   const timelineElements = [
     {
       time: '14h',
-      title: 'Mairie, si vous en avez envie',
+      title: 'Mairie, présence non obligatoire',
       location: '8 Pl. de la Mairie, 37260 Thilouze',
       mapLink: 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x47fd26bae9f4989b:0x1516dcaa43274098?sa=X&ved=1t:8290&ictx=111',
       icon: process.env.PUBLIC_URL + '/images/kiss.webp',
@@ -45,7 +45,7 @@ const Programme = () => {
       
     },
     {
-      time: '16h',
+      time: '16h30',
       title: 'Cérémonie laïque',
       location: 'Grange de Fossillon, 37110 Autrèche',
       mapLink: 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x47e34b524ab8663b:0x234d09a1d15e1399?sa=X&ved=1t:8290&ictx=111',
@@ -54,7 +54,7 @@ const Programme = () => {
       
     },
     {
-      time: '17h',
+      time: '17h30',
       title: 'Cocktail',
       description: 'Vin d\'honneur et animations',
       icon: process.env.PUBLIC_URL + '/images/cheers.webp',
@@ -62,7 +62,7 @@ const Programme = () => {
       
     },
     {
-      time: '19h',
+      time: '20h',
       title: 'Dîner',
       description: 'On va se régaler !',
       icon: process.env.PUBLIC_URL + '/images/food.webp',
@@ -70,7 +70,7 @@ const Programme = () => {
       
     },
     {
-      time: '22h ',
+      time: '23h ',
       title: 'Festivités',
       description: 'Dansez jusqu\'au bout de la nuit',
       icon: process.env.PUBLIC_URL + '/images/mirror-ball.webp',
@@ -80,7 +80,7 @@ const Programme = () => {
     {
       time: '12h ',
       title: 'Brunch du dimanche',
-      description: 'Pour la récup',
+      description: 'Et si chacun ramenait sa petite spécialité ?',
       icon: process.env.PUBLIC_URL + '/images/brunch.webp',
       pointPosition: 'translate-x-[260px] translate-y-[92px]',
      
@@ -248,7 +248,7 @@ const Programme = () => {
         aria-hidden="true"
       />
       
-      <h2 className="text-2xl font-bold mb-16 text-center">Programme de la journée</h2>
+      <h2 className="text-3xl font-bold text-white mb-16 text-center">Programme de la journée</h2>
       
       {/* SVG Desktop */}
       <div className="absolute left-1/2 top-24 -translate-x-1/2 h-full w-6/12 -z-10 hidden lg:block">

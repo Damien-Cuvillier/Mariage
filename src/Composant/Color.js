@@ -41,14 +41,13 @@ const Color = () => {
 
   return (
     <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
-      <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-16">
+      <h2 className="text-2xl sm:text-3xl text-white font-bold text-center mb-8 sm:mb-16">
         Code Couleur du Mariage
       </h2>
       
       <div className="max-w-3xl mx-auto">
-        <p className="text-center text-gray-900 mb-8 sm:mb-12 px-4">
-          Pour créer une harmonie visuelle lors de notre célébration, 
-          voici les couleurs suggérées pour vos tenues.
+        <p className="text-center text-black mb-8 sm:mb-12 px-4">
+          Vive la couleur ! <br></br>On vous attend flashy et étincellant !
         </p>
 
         {/* Grille de couleurs responsive */}
@@ -72,7 +71,7 @@ const Color = () => {
               </div>
 
               {/* Nom de la couleur */}
-              <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2">
+              <h3 className="text-base sm:text-lg text-white font-semibold mb-1 sm:mb-2">
                 {color.name}
               </h3>
 
@@ -81,7 +80,7 @@ const Color = () => {
           ))}
         </div>
 
-        <div className="mt-8 sm:mt-14 text-center text-gray-900 px-4">
+        <div className="mt-8 sm:mt-14 text-center text-black px-4">
           <p className="italic text-sm sm:text-base">
             Ces couleurs sont données à titre indicatif pour vous guider dans vos choix vestimentaires.
           </p>

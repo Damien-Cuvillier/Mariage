@@ -28,8 +28,8 @@ function Banner() {
     return (
         <div className="w-full p-4 md:p-8 text-center mt-8 md:mt-8">
             {/* Titre responsive */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl mb-6 md:mb-8 font-bold">Léa & Damien</h1>
-
+            <h1 className="text-3xl md:text-4xl lg:text-5xl text-white mb-6 md:mb-8 font-bold">Léa & Damien</h1>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl text-white mb-6 md:mb-8 font-bold">13 Septembre 2025</h2>
             {/* Compte à rebours responsive */}
             <div className="grid grid-cols-2 md:flex md:justify-center items-center gap-4 md:gap-8 mb-6 md:mb-8 max-w-xs md:max-w-none mx-auto">
                 <div className="flex flex-col items-center p-2 md:p-4 bg-white/50 rounded-lg shadow-sm">
@@ -53,15 +53,15 @@ function Banner() {
             {/* Images responsives */}
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
                 {[
-                    { src: 'photo1.jpg', alt: 'cérémonie laique', text: '13' },
-                    { src: 'photo2.jpg', alt: 'alliances', text: '09' },
-                    { src: 'photo3.jpg', alt: 'remerciements', text: '2025' }
+                    { src: 'leadamien20.jpg', alt: 'cérémonie laique' },
+                    { src: 'leadamien10.jpg', alt: 'alliances'},
+                    { src: 'leadamien18.jpg', alt: 'remerciements'}
                 ].map((image, index) => (
                     <div key={index} className="relative w-full md:w-[300px] lg:w-[500px] group">
                         <img 
                             src={`${process.env.PUBLIC_URL}/images/${image.src}`}
                             alt={image.alt}
-                            className="w-full h-[250px] md:h-[300px] lg:h-[400px] object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105"
+                            className="w-full h-[400px] md:h-[450px] lg:h-[600px] object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-black/30 rounded-lg"></div>
                         <span className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl md:text-5xl lg:text-6xl font-bold pt-12">

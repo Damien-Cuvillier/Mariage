@@ -45,7 +45,7 @@ const Hebergement = () => {
                 aria-hidden="true"
             />
             
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-8 text-center">
+            <h2 className="text-xl sm:text-2xl text-gray-100 lg:text-3xl font-bold mb-4 sm:mb-8 text-center">
                 Hébergements
             </h2>
 
@@ -66,15 +66,15 @@ const Hebergement = () => {
 
             {/* Conteneur pour le texte avec largeur maximale */}
             <div className="max-w-2xl mx-auto space-y-4 sm:space-y-6">
-                <p className='text-sm sm:text-base text-center'>
+                <p className='text-sm sm:text-base text-gray-100 text-center'>
                     Nous avons à disposition un total de <strong>31 couchages</strong> répartis en 2 gîtes de <strong>10 et 15 convives</strong>, ainsi que 2 roulottes tout-confort, totalement fonctionnelles et isolées.
                 </p>
                 
-                <p className='text-sm sm:text-base text-center'>
+                <p className='text-sm sm:text-base text-gray-100 text-center'>
                     Les hébergements seront réservés en premier pour les personnnes habitant loin d'Autrèche, qui ne peuvent pas rentrer chez eux le soir même. Merci de votre compréhension
                 </p>
                 
-                <p className='text-sm sm:text-base text-center'>
+                <p className='text-sm sm:text-base text-gray-100 text-center'>
                     Nous avons aussi la possibilité de dormir en tente si jamais il n'y a plus de place, nous avons le droit jusqu'à <strong>5 tentes</strong>
                 </p>
             </div>

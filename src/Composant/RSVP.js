@@ -79,7 +79,7 @@ const RSVP = ({ showOnlyForm = false }) => {
                                             Répondez SVP !
                                         </h2>
                                         <p className='text-sm sm:text-base lg:text-lg text-gray-800 max-w-md mx-auto px-2'>
-                                            Tu ne sais pas quoi me répondre ? Dis moi si tu viens au mariage le 13.09.2025, combien vous êtes et si tu viens à la mairie !
+                                            Tu ne sais pas quoi me répondre ? Dis moi si tu viens au mariage le <strong>13.09.2025</strong>, combien vous êtes, si tu viens à la <strong>mairie</strong> et si tu viens au <strong>brunch</strong> !
                                         </p>
                                     </div>
 
@@ -87,7 +87,7 @@ const RSVP = ({ showOnlyForm = false }) => {
                                         {/* Champs du formulaire avec styles responsifs */}
                                         <InputField name="name" type="text" placeholder="Votre nom" />
                                         <InputField name="email" type="email" placeholder="votre@email.com" />
-                                        <InputField name="address" type="text" placeholder="Votre adresse" />
+                                        <InputField name="number" type="number" placeholder="Combien vous êtes ?" />
                                         <InputField name="alim" type="text" placeholder="Restrictions alimentaires" />
                                         <TextAreaField name="message" placeholder="Votre message..." />
 
