@@ -10,7 +10,7 @@ const RSVP = ({ showOnlyForm = false }) => {
         name: Yup.string().required('Veuillez remplir le champ'),
         email: Yup.string().email('Adresse mail invalide').required('Veuillez remplir le champ'),
         message: Yup.string().required('Veuillez remplir le champ'),
-        address: Yup.string().required('Veuillez remplir le champ'),
+        number: Yup.string().required('Veuillez remplir le champ'),
         alim: Yup.string().required('Veuillez remplir le champ'),
     });
 
@@ -28,6 +28,8 @@ const RSVP = ({ showOnlyForm = false }) => {
               access_key: WEB3FORMS_KEY,
               name: values.name,
               email: values.email,
+              number: values.number,
+              alim: values.alim,
               message: values.message,
               subject: 'Les invités ont répondu'
             }),
@@ -67,7 +69,7 @@ const RSVP = ({ showOnlyForm = false }) => {
 
                 <div className={`contact-form-section ${showOnlyForm ? '' : 'min-h-screen'} mt-8 sm:mt-8`}>
                     <Formik
-                        initialValues={{ name: '', email: '', message: '', address: '', alim: '' }}
+                        initialValues={{ name: '', email: '', message: '', number: '', alim: '' }}
                         validationSchema={validationSchema}
                         onSubmit={handleSubmit}
                     >

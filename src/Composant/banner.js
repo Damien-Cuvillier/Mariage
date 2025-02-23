@@ -53,9 +53,9 @@ function Banner() {
             {/* Images responsives */}
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
                 {[
-                    { src: 'leadamien20.jpg', alt: 'cérémonie laique' },
-                    { src: 'leadamien10.jpg', alt: 'alliances'},
-                    { src: 'leadamien18.jpg', alt: 'remerciements'}
+                    { src: 'leadamien20.webp', alt: 'cérémonie laique' },
+                    { src: 'leadamien10.webp', alt: 'alliances'},
+                    { src: 'leadamien18.webp', alt: 'remerciements'}
                 ].map((image, index) => (
                     <div key={index} className="relative w-full md:w-[300px] lg:w-[500px] group">
                         <img 
