@@ -63,7 +63,7 @@ function Banner() {
                             alt={image.alt}
                             className="w-full h-[400px] md:h-[450px] lg:h-[600px] object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-black/30 rounded-lg"></div>
+                        <div className="absolute inset-0 rounded-lg"></div>
                         <span className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl md:text-5xl lg:text-6xl font-bold pt-12">
                             {image.text}
                         </span>
