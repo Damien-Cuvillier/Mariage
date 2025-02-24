@@ -97,7 +97,7 @@ const Programme = () => {
     
     if (!balloon || (!desktopPath && !mobilePath && !tabletPath)) return;
 
-    const path = isMobile ? mobilePath : isTablet ? tabletPath : desktopPath;
+    const path = isMobile ? mobilePathRef.current : isTablet ? tabletPathRef.current : desktopPath;
     const pathLength = path.getTotalLength();
     let progress = 0;
 
@@ -221,8 +221,8 @@ const Programme = () => {
       balloon.style.transform = `translate(-50%, -50%)`;
       balloon.style.opacity = '1';
     };
-  }, []);
-//#E80564 232,5,100
+  }, [windowWidth]);
+
 
   useEffect(() => {
     const handleResize = () => {

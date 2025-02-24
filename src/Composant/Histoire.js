@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Histoire = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Fait défiler vers le haut de la page
+  }, []); // Le tableau vide [] signifie que cet effet s'exécute une seule fois lors du montage du composant
   return (
     <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-8">
       <div 

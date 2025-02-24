@@ -5,22 +5,26 @@ const Color = () => {
     {
       name: 'Orange',
       hex: '#fb4c0d',
+      darkHex:'#fb4c0d',
       rgb: 'rgb(251, 76, 13)',
     },
     {
       name: 'Jaune',
       hex: '#FFD700',
+      darkHex:'#FFD700',
       rgb: 'rgb(255, 215, 0)',
     },
     
     {
       name: 'Vert',
       hex: '#006C2E',
+      darkHex:'#006C2E',
       rgb: 'rgb(0, 108, 46)',
     },
     {
       name: 'Fushia',
       hex: '#E80564',
+      darkHex:'#E80564',
       rgb: 'rgb(232, 5, 100)',
     },
    
@@ -28,17 +32,19 @@ const Color = () => {
     {
       name: 'Violet',
       hex: '#6A026E',
+      darkHex:'#6A026E',
       rgb: 'rgb(106, 2, 110)',
     },
    
     {
       name: 'Bleu',
       hex: '#361FDB',
+      darkHex:'#361FDB',
       rgb: 'rgb(54, 31, 219)',
     },
   
   ];
-
+  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
   return (
     <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
       <h2 className="text-2xl sm:text-3xl text-white font-bold text-center mb-8 sm:mb-16">
@@ -61,9 +67,9 @@ const Color = () => {
               <div 
                 className="w-16 sm:w-20 h-16 sm:h-20 rounded-full shadow-lg hover:shadow-xl 
                          transition-all duration-300 mb-3 sm:mb-4 relative group cursor-pointer
-                         hover:scale-110"
+                         hover:scale-110 "
                 style={{ 
-                  backgroundColor: color.hex,
+                  backgroundColor: isDarkMode ? color.darkHex : color.hex,
                   border: color.name === 'Blanc' ? '2px solid #E5E7EB' : 'none'
                 }}
               >
