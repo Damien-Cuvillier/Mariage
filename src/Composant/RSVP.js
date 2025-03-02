@@ -87,7 +87,7 @@ const RSVP = ({ showOnlyForm = false }) => {
 
                                     <Form className="space-y-4 sm:space-y-6">
                                         {/* Champs du formulaire avec styles responsifs */}
-                                        <InputField name="name" type="text" placeholder="Votre nom" />
+                                        <InputField name="name" type="text" placeholder="Votre nom / Prénom" />
                                         <InputField name="email" type="email" placeholder="votre@email.com" />
                                         <InputField name="number" type="number" placeholder="Combien vous êtes ?" />
                                         <InputField name="alim" type="text" placeholder="Restrictions alimentaires" />
