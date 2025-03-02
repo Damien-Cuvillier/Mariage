@@ -81,7 +81,7 @@ const RSVP = ({ showOnlyForm = false }) => {
                                             Répondez SVP !
                                         </h2>
                                         <p className='text-sm sm:text-base lg:text-lg text-gray-800 max-w-md mx-auto px-2'>
-                                            Tu ne sais pas quoi me répondre ? Dis moi si tu viens au mariage le <strong>13.09.2025</strong>, combien vous êtes, si tu viens à la <strong>mairie</strong> et si tu viens au <strong>brunch</strong> !
+                                            <strong className='text-xl text-blue-700'>Veuillez répondre avant le 13 juin, merci !</strong> <br></br>Tu ne sais pas quoi me répondre ? Dis moi si tu viens au mariage le <strong>13.09.2025</strong>, combien vous êtes, s'il y a les enfants, si tu viens à la <strong>mairie</strong> et si tu viens au <strong>brunch</strong> !
                                         </p>
                                     </div>
 
